@@ -47,7 +47,7 @@ const Greeting: React.FC<GreetingPropsType> = (
                         onBlur={onBlur}
                     />
                     <div id={'hw3-error'} className={s.error}>
-                        {/*{error}*/}
+                        {error}
                     </div>
                 </div>
 
