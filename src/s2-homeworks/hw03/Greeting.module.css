@@ -2,34 +2,91 @@
 }
 
 .inputAndButtonContainer {
+    display: flex;
+
 }
 
 .error {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 10px;
+    color: #CC0000;
 }
 
 .input {
+    width: 372px;
+    height: 36px;
+    border: 1px solid #D1D1D1;
+    outline: #D1D1D1;
+    border-radius: 5px;
 }
 
 .input:focus {
+    width: 372px;
+    height: 36px;
+    border: 1px solid #D1D1D1;
+    outline: #D1D1D1;
+    border-radius: 5px;
 }
 
 .errorInput {
+    width: 372px;
+    height: 36px;
+    outline: #cc0000;
+    border: 1px solid #CC0000;
+    border-radius: 5px;
 }
 
 .button {
+    margin-left: 12px;
+    width: 78px;
+    height: 36px;
+    background: #0066CC;
+    border: none;
+    border-radius: 3px;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    opacity: 1;
+    cursor: pointer;
 }
 
 .button:focus {
+
+}
+
+.button:hover {
+    background: #1e90ff;
 }
 
 .button:active {
+    background: #0059b3;
 }
 
 .button:disabled {
+    opacity: 0.5;
 }
 
 .text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+
 }
 
 .greeting {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    margin-top: 10px;
 }
