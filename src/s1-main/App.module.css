@@ -1,13 +1,14 @@
 .App {
     margin: 60px auto;
     width: 1281px;
-    height: 720px;
+    /*height: 720px;*/
     background: #FFFFFF;
     border: 1px solid #D9D9D9;
 }
 
 .hw {
     width: 1280px;
+    min-height: 336px;
     max-height: 518px;
     overflow-x: hidden;
     scroll-snap-type: y mandatory;
