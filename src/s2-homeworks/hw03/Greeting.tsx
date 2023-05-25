@@ -46,9 +46,9 @@ const Greeting: React.FC<GreetingPropsType> = (
                         onKeyDown={onEnter}
                         onBlur={onBlur}
                     />
-                    {/*<div id={'hw3-error'} className={s.error}>*/}
-                    {/*    /!*{error}*!/*/}
-                    {/*</div>*/}
+                    <div id={'hw3-error'} className={s.error}>
+                        {/*{error}*/}
+                    </div>
                 </div>
 
                 <button
@@ -60,16 +60,17 @@ const Greeting: React.FC<GreetingPropsType> = (
                     add
                 </button>
             </div>
-            {error ?
-                <div id={'hw3-error'} className={s.error}>
-                    {error}
-                </div>
-                : (lastUserName && (
+            {/*{error ?*/}
+            {/*    <div id={'hw3-error'} className={s.error}>*/}
+            {/*        {error}*/}
+            {/*    </div>*/}
+            {/*    : (*/}
+            {lastUserName && (
                     <div className={s.greeting}>
                         Привет <span id={'hw3-last-user'}>{lastUserName}</span>!
                     </div>
-                ))
-            }
+
+            )}
 
         </div>
     )
