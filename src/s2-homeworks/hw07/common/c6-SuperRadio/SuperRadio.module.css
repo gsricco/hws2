@@ -1,7 +1,9 @@
 .radio {
+    width: 20px;
 }
 
 .radio::before {
+    color:red;
 }
 
 
@@ -9,7 +11,10 @@
 }
 
 .label {
+
 }
 
 .options {
+    color:red;
+
 }
