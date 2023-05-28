@@ -1,3 +1,6 @@
 .loader {
+    width: 100px;
+    height: 100px;
     /*свг и/или анимация*/
+    background: no-repeat center url("../hw10/bll/Spinner-1s-210px.gif");
 }
