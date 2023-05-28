@@ -25,22 +25,25 @@
 .secondary {
     width: 128px;
     height: 30px;
-    background: #0066CC;
+    background: transparent;
     font-weight: 600;
     font-size: 14px;
     line-height: 20px;
-    color: #FFFFFF;
+    color: #002E5C;
     border-radius: 3px;
-    border:none;
+    border: 1px solid #002E5C;
+
 }
 
 .default {
     width: 158px;
     height: 30px;
-    background: transparent;
-    color: #002E5C;
+    background: #0066CC;
+
+    color: #FFFFFF;
     border-radius: 3px;
-    border: 1px solid #002E5C;
+    border:none;
+
 }
 
 .red {
