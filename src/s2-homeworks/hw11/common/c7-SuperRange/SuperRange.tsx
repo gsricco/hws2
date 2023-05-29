@@ -12,7 +12,7 @@ const SuperRange: React.FC<SliderProps&PropsType> = ({value, change,...props}) =
             change(newValue)
         } else {
             setValue(newValue as number[])
-            change(value1 as number[])
+            change(newValue as number[])
 
         }
 
