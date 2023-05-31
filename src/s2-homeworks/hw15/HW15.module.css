@@ -3,25 +3,61 @@
 }
 
 .developer {
-
+    display: flex;
+    align-items: center;
 }
 
 .techHeader {
     width: 50vw;
+    display: flex;
+    align-items: center;
+
 }
 
 .developerHeader {
-
+    /*text-transform: capitalize;*/
+    /*width: 50vw;*/
+    display: flex;
+    align-items: center;
 }
 
 .row {
     display: flex;
+    height: 36px;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    padding:0 10px;
+    text-transform: capitalize;
+    border-bottom:1px solid #E5E5E5;
 }
-
+.row:last-of-type {
+    border:none;
+}
 .rowHeader {
+    margin-top: 20px;
     display: flex;
+    height: 36px;
+    align-items: center;
+    background: #E5E5E5;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+    padding:0 10px;
+    text-transform: capitalize;
 }
 
 .loading {
-
+    width: 1280px;
+    height: 336px;
+    background: #F5F7FB;
+    position: absolute;
+    opacity: 0.8;
+    left: 28px;
+    margin-top: -20px;
 }

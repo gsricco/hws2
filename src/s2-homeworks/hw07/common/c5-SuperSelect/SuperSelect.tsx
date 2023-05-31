@@ -42,6 +42,10 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
             console.log('SELECT', e.currentTarget.value)
             onChangeOption(+e.currentTarget.value)
         }
+        if (onChange) {
+            console.log('onChange', e.currentTarget.value)
+            onChange(e)
+        }
     }
 
     const finalSelectClassName = s.select + (className ? ' ' + className : '')

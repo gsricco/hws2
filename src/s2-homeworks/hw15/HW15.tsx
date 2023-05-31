@@ -5,6 +5,7 @@ import axios from 'axios'
 import SuperPagination from './common/c9-SuperPagination/SuperPagination'
 import {useSearchParams} from 'react-router-dom'
 import SuperSort from './common/c10-SuperSort/SuperSort'
+import {CircularProgress} from "@mui/material";
 
 /*
 * 1 - дописать SuperPagination
@@ -38,7 +39,7 @@ const getTechs = (params: ParamsType) => {
         })
 }
 
-const HW15 = () => {
+const  HW15 = () => {
     const [sort, setSort] = useState('')
     const [page, setPage] = useState(1)
     const [count, setCount] = useState(4)
@@ -47,6 +48,9 @@ const HW15 = () => {
     const [searchParams, setSearchParams] = useSearchParams()
     const [techs, setTechs] = useState<TechType[]>([])
 
+
+    console.log('page:',page,'count:',count, 'searchParams',searchParams)
+
     const sendQuery = (params: any) => {
         setLoading(true)
         getTechs(params)
@@ -54,31 +58,36 @@ const HW15 = () => {
                 // делает студент
 
                 // сохранить пришедшие данные
-
+                if(res) {
+                    console.log(res.data.techs)
+                    console.log(res.data.totalCount)
+                    setTechs(res.data.techs)
+                    setTotalCount(res.data.totalCount)
+                    //
+                    setLoading(false)
+                    // setTotalCount(res.data.techs.length)
+                }
                 //
             })
     }
 
     const onChangePagination = (newPage: number, newCount: number) => {
         // делает студент
-
-        // setPage(
-        // setCount(
-
-        // sendQuery(
-        // setSearchParams(
-
-        //
+        console.log('onChangePagination', newPage, newCount)
+        setPage(newPage)
+        setCount(newCount)
+        sendQuery({sort,page:newPage, count:newCount})
+        setSearchParams(`${page}${count}`)
     }
 
     const onChangeSort = (newSort: string) => {
         // делает студент
 
-        // setSort(
-        // setPage(1) // при сортировке сбрасывать на 1 страницу
+        setSort(newSort)
+        setPage(1) // при сортировке сбрасывать на 1 страницу
 
-        // sendQuery(
-        // setSearchParams(
+        sendQuery({sort:newSort,page, count})
+        setSearchParams(`${sort}${page}${count}`)
 
         //
     }
@@ -107,7 +116,7 @@ const HW15 = () => {
             <div className={s2.hwTitle}>Homework #15</div>
 
             <div className={s2.hw}>
-                {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...</div>}
+                {idLoading && <div id={'hw15-loading'} className={s.loading}>Loading...<CircularProgress /></div>}
 
                 <SuperPagination
                     page={page}
